@@ -1,4 +1,5 @@
 <?php
+    date_default_timezone_set('Europe/London');
 
     spl_autoload_register(
       function($class) {
@@ -6,7 +7,11 @@
           if ($classes === null) {
               $classes = array(
                   'mydate' => '/MyDate.php',
-                  'date' => '/Date.php'
+                  'date' => '/Date.php',
+                  'datedifference' => '/DateDifference.php',
+                  'datecalculatorinterface' => '/DateCalculatorInterface.php',
+                  'datehelper' => '/DateHelper.php',
+                  'datecalculator' => '/DateCalculator.php'
                 );
           }
           $cn = strtolower($class);

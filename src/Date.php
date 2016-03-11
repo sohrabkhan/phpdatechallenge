@@ -109,7 +109,7 @@ class Date
     /**
      * Return the day part of the date
      *
-     * @return int
+* @return int
      */
     public function getDay()
     {

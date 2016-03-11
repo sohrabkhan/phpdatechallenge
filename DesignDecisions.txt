@@ -1,0 +1,30 @@
+Design Decisions
+================
+
+Introduction
+------------
+In order to solve the problem elegantly and also show off my skills I've made use of the all four pillars of Object Oriented Programming i.e. Abstraction, Polymorphism, Inheritance and Encapsulation.
+
+
+Polymorphic Calculator
+----------------------
+I've created a Date entity that represents a date (no surprise).
+I've defined an interface DateCalculatorInterface which defines the basic protocol for all kinds of date calculators.
+The DateDifference implements the DateCalculatorInterface and hence is a type of date calculator which calculates
+the difference in two dates.
+
+The DateCalculator is the actual calculator. The calculate method accepts a DateCalculatorInterface, so any class that implements this interface can be passed to the calculate method. If an instance of the DateDifference is passed it will calculate the difference. If in the future we develop a DateAddition class that can be passed to this method and hence the DateCalculator will call the calculate method on it.
+
+For abstraction and encapsulation all class properties are private and can only be accessed using the getters and setters.
+
+Problems Encountered
+--------------------
+I preferred to count the difference by checking the days it's been since 1AD or 1970AD (as that's the standard that Unix uses). It wouldn't be heavy and without any major looping i.e. with minimum CPU iterations I would be able to find the difference. It would have been super efficient, but the problem was that I couldn't convert the days difference into months and years easily. Since the requirements were to get the difference in total days, years, months and days I had to go with CPU iterations.
+
+Solutions
+---------
+In order to keep the looping to minimum I would calculate the number of months by looping upto a maximum of 12 (the number of months in a year) and looping for the number of years difference. So still I kept the number of CPU iterations to a minimum and still calculating efficiently the difference in the two dates.
+
+Final Thoughts
+--------------
+It was an amazing exercise that challenged me and I had to think about the solution for a couple of hours before programming it.
