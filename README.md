@@ -1,6 +1,8 @@
 Avanti PHP Test
 ===============
 
+[![Build Status](https://travis-ci.org/sohrabkhan/phpdatechallenge.svg?branch=master)](https://travis-ci.org/sohrabkhan/phpdatechallenge)
+
 Calculate the difference between two given dates without using any of the PHP date functions, objects or packages not written by yourself.
 
 This includes:
